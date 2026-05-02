@@ -1,6 +1,5 @@
 # Holy Quran Web Application 📖
 
-![Holy Logo](public/quran.png)
 
 [![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-qurvn.netlify.app-blue?style=for-the-badge)](https://qurvn.netlify.app/)
 
