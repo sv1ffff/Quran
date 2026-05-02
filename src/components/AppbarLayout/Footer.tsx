@@ -1,6 +1,5 @@
 import translate from "../../translations/translate";
 import Form from "../Form";
-import { motion } from "framer-motion";
 
 export default function Footer(props: {}) {
   return (

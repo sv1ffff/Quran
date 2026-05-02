@@ -1,17 +1,14 @@
 import { ChangeEvent, useState } from "react";
 import SourateLists from "../components/Home/SourateLists";
 import SearchInput from "../components/SearchInput";
-import { useTheme } from "../hooks";
 import { useGetMetaQuranData } from "../hooks/useQueryApi";
 import { SurahsReference } from "../types/quran";
 import { motion } from "framer-motion";
-import translate from "../translations/translate";
 import { normalizeArabic } from "../libs/normalizeArabic";
 
 type Props = {};
 
 export default function Home(props: Props) {
-  const { isDark } = useTheme();
   const [search, setSearch] = useState("");
   const updateSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);

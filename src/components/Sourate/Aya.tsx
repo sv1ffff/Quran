@@ -1,7 +1,6 @@
 import { Ayah } from "../../types/sourate";
 import { HiPlay, HiStop } from "react-icons/hi";
 import LoadingSpinner from "../LoadingSpinner";
-import { motion } from "framer-motion";
 
 type Props = {
   sourateID: string | undefined;

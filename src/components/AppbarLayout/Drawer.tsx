@@ -111,7 +111,7 @@ const Drawer = motion((props: Props) => {
              <div className="p-6 rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-xl shadow-blue-500/20">
                 <p className="text-xs font-medium opacity-80 mb-1">Developed by</p>
                 <h4 className="font-black text-lg">Saif Fikry</h4>
-                <a href="https://svif.online/" target="_blank" className="text-[10px] uppercase tracking-widest font-black opacity-60 hover:opacity-100 transition-opacity">Visit Portfolio</a>
+                <a href="https://svif.online/" target="_blank" rel="noreferrer" className="text-[10px] uppercase tracking-widest font-black opacity-60 hover:opacity-100 transition-opacity">Visit Portfolio</a>
              </div>
           </div>
         </motion.div>

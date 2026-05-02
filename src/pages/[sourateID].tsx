@@ -6,7 +6,7 @@ import Editions from "../components/Sourate/Editions";
 import { useGetSourates } from "../hooks/useQueryApi";
 import { Ayah } from "../types/sourate";
 import { motion, AnimatePresence } from "framer-motion";
-import { HiOutlineArrowDown, HiOutlinePause, HiOutlinePlay } from "react-icons/hi";
+import { HiOutlinePause, HiOutlinePlay } from "react-icons/hi";
 
 type Props = {};
 
