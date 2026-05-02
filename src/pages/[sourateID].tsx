@@ -1,10 +1,8 @@
-import { ChangeEvent, useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
 import Aya from "../components/Sourate/Aya";
-import Editions from "../components/Sourate/Editions";
 import { useGetSourates } from "../hooks/useQueryApi";
-import { Ayah } from "../types/sourate";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlinePause, HiOutlinePlay } from "react-icons/hi";
 
@@ -12,18 +10,12 @@ type Props = {};
 
 export default function Sourate(props: Props) {
   const { sourateID } = useParams();
-  const [edition, setEdition] = useState("/en.asad");
   const [isAutoScrolling, setIsAutoScrolling] = useState(false);
   const [scrollSpeed, setScrollSpeed] = useState(1);
   const scrollInterval = useRef<NodeJS.Timeout | null>(null);
   const audio = new Audio();
 
   const arabic = useGetSourates(sourateID as string, "");
-  const translated = useGetSourates(sourateID as string, "/" + edition);
-
-  const updateEdition = (e: ChangeEvent<HTMLSelectElement>) => {
-    setEdition("/" + e.target.value);
-  };
 
   useEffect(() => {
     if (isAutoScrolling) {
@@ -49,7 +41,7 @@ export default function Sourate(props: Props) {
     );
   }
 
-  if (arabic.isError || translated.isError) {
+  if (arabic.isError) {
     return (
       <div className="flex justify-center items-center h-screen dark:bg-[#0F172A] bg-slate-50">
         <h1 className="text-red-500 text-xl font-bold bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-xl">
@@ -85,23 +77,23 @@ export default function Sourate(props: Props) {
           )}
         </AnimatePresence>
 
-         <motion.button
-           whileHover={{ scale: 1.1 }}
-           whileTap={{ scale: 0.9 }}
-           onClick={() => setIsAutoScrolling(!isAutoScrolling)}
-           className={`p-4 rounded-2xl shadow-2xl flex items-center justify-center transition-all duration-300 min-h-[56px] min-w-[56px] ${
-             isAutoScrolling 
-               ? 'bg-blue-600 text-white ring-4 ring-blue-500/20' 
-               : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300'
-           }`}
-         >
-           {isAutoScrolling ? <HiOutlinePause size={28} /> : <div className="flex flex-col items-center"><HiOutlinePlay size={28} /><span className="text-[10px] sm:text-xs font-bold mt-1">AUTO SCROLL</span></div>}
-         </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setIsAutoScrolling(!isAutoScrolling)}
+          className={`p-4 rounded-2xl shadow-2xl flex items-center justify-center transition-all duration-300 min-h-[56px] min-w-[56px] ${
+            isAutoScrolling 
+              ? 'bg-blue-600 text-white ring-4 ring-blue-500/20' 
+              : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300'
+          }`}
+        >
+          {isAutoScrolling ? <HiOutlinePause size={28} /> : <div className="flex flex-col items-center"><HiOutlinePlay size={28} /><span className="text-[10px] sm:text-xs font-bold mt-1">AUTO SCROLL</span></div>}
+        </motion.button>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="pt-32 pb-12">
-          <Editions updateEdition={updateEdition} />
+          {/* Editions selector removed - Arabic only */}
         </div>
         
         <motion.ul 
@@ -109,13 +101,11 @@ export default function Sourate(props: Props) {
           animate={{ opacity: 1 }}
           className="space-y-8"
         >
-          {arabic.data?.ayahs.map((aya, index) => (
+          {arabic.data?.ayahs.map((aya) => (
             <Aya
               key={aya.number}
               sourateID={sourateID}
               aya={aya}
-              translatedAya={translated.data?.ayahs[index] as Ayah}
-              isTranslatedLoading={translated.isLoading}
               audio={audio}
             />
           ))}

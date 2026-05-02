@@ -1,18 +1,15 @@
 import { Ayah } from "../../types/sourate";
 import { HiPlay, HiStop } from "react-icons/hi";
-import LoadingSpinner from "../LoadingSpinner";
 
 type Props = {
   sourateID: string | undefined;
   aya: Ayah;
-  translatedAya: Ayah;
-  isTranslatedLoading: boolean;
   audio: HTMLAudioElement;
 };
 
 export default function Aya(props: Props) {
   const setAudio = () => {
-    props.audio.src = `https://cdn.islamic.network/quran/audio/128/ar.alafasy/${props.aya.number}.mp3 `;
+    props.audio.src = `https://cdn.islamic.network/quran/audio/128/ar.alafasy/${props.aya.number}.mp3`;
     props.audio.play();
   };
 
@@ -21,19 +18,9 @@ export default function Aya(props: Props) {
     props.audio.currentTime = 0;
   };
 
-  const translated = props.isTranslatedLoading ? (
-    <div className="flex justify-center items-center py-8">
-      <LoadingSpinner className="w-8 h-8" />
-    </div>
-  ) : (
-    <div id="translated" dir="auto" className="text-lg sm:text-xl md:text-2xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-      {props.translatedAya.text}
-    </div>
-  );
-
   return (
     <div 
-      className="group relative mb-8 p-4 sm:p-8 md:p-12 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl md:rounded-3xl"
+      className="group relative mb-8 p-4 sm:p-6 md:p-8 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl md:rounded-3xl"
     >
       <div className="flex flex-col space-y-10">
         {/* Header with Number and Audio */}
@@ -62,20 +49,15 @@ export default function Aya(props: Props) {
           </div>
         </div>
 
-        {/* Arabic Text (Image) */}
-        <div className="w-full overflow-x-auto py-4">
-          <div className="min-w-[320px] md:flex md:justify-end">
+        {/* Arabic Text (Image) - Enlarged for mobile */}
+        <div className="w-full overflow-x-auto py-6">
+          <div className="min-w-[380px] sm:min-w-[500px] md:flex md:justify-end">
             <img
               alt={`Aya ${props.aya.numberInSurah}`}
-              className="dark:filter dark:invert-[100%] w-full h-auto block"
+              className="dark:filter dark:invert-[100%] w-full max-w-none h-auto block"
               src={`https://cdn.islamic.network/quran/images/high-resolution/${props.sourateID}_${props.aya.numberInSurah}.png`}
             />
           </div>
-        </div>
-
-        {/* Translation */}
-        <div className="pt-8 border-t border-slate-50 dark:border-slate-800/50">
-          {translated}
         </div>
       </div>
     </div>
