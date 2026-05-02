@@ -67,7 +67,7 @@ export default function Aya(props: Props) {
           <img
             alt={`Aya ${props.aya.numberInSurah}`}
             className="dark:filter dark:invert-[100%] max-w-full h-auto opacity-90 group-hover:opacity-100 transition-opacity"
-            src={`http://cdn.islamic.network/quran/images/high-resolution/${props.sourateID}_${props.aya.numberInSurah}.png`}
+            src={`https://cdn.islamic.network/quran/images/high-resolution/${props.sourateID}_${props.aya.numberInSurah}.png`}
           />
         </div>
 

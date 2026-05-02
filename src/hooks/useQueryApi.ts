@@ -7,7 +7,7 @@ export function useGetMetaQuranData() {
   const [isError, setError] = useState(false);
 
   useEffect(() => {
-    fetch("http://api.alquran.cloud/v1/meta")
+    fetch("https://api.alquran.cloud/v1/meta")
       .then((res) => res.json())
       .then((result) => {
         setData(result.data);
@@ -28,7 +28,7 @@ export function useGetSourates(sourateID: string, translation: string) {
   const [isError, setError] = useState(false);
 
   useEffect(() => {
-    fetch(`http://api.alquran.cloud/v1/surah/${sourateID}${translation}`)
+    fetch(`https://api.alquran.cloud/v1/surah/${sourateID}${translation}`)
       .then((res) => res.json())
       .then((result) => {
         setData(result.data);
