@@ -63,13 +63,14 @@ export default function Aya(props: Props) {
         </div>
 
         {/* Arabic Text (Image) */}
-        <div className="flex justify-center md:justify-end py-4">
-          <img
-            alt={`Aya ${props.aya.numberInSurah}`}
-            className="dark:filter dark:invert-[100%] w-full md:w-auto max-w-full h-auto opacity-90 group-hover:opacity-100 transition-opacity"
-            style={{ minWidth: '100%', maxWidth: '100%' }}
-            src={`https://cdn.islamic.network/quran/images/high-resolution/${props.sourateID}_${props.aya.numberInSurah}.png`}
-          />
+        <div className="w-full overflow-x-auto py-4">
+          <div className="min-w-[320px] md:flex md:justify-end">
+            <img
+              alt={`Aya ${props.aya.numberInSurah}`}
+              className="dark:filter dark:invert-[100%] w-full h-auto block"
+              src={`https://cdn.islamic.network/quran/images/high-resolution/${props.sourateID}_${props.aya.numberInSurah}.png`}
+            />
+          </div>
         </div>
 
         {/* Translation */}
