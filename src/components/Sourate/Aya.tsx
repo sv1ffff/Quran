@@ -26,7 +26,7 @@ export default function Aya(props: Props) {
       <LoadingSpinner className="w-8 h-8" />
     </div>
   ) : (
-    <div id="translated" dir="auto" className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+    <div id="translated" dir="auto" className="text-lg sm:text-xl md:text-2xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
       {props.translatedAya.text}
     </div>
   );
@@ -39,7 +39,7 @@ export default function Aya(props: Props) {
         {/* Header with Number and Audio */}
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-6">
-            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white font-bold text-lg border border-slate-100 dark:border-slate-700">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white font-bold text-base sm:text-lg border border-slate-100 dark:border-slate-700">
               {props.aya.numberInSurah}
             </div>
             <div className="flex space-x-2">

@@ -40,10 +40,10 @@ export default function Feedback() {
         animate={{ opacity: 1, y: 0 }}
         className="max-w-2xl w-full bg-white dark:bg-gray-800 p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-gray-100 dark:border-gray-700"
       >
-        <h1 className="text-5xl font-black mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
+        <h1 className="text-4xl sm:text-5xl font-black mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
           {translate("feedback.give-feedback")}
         </h1>
-        <p className="text-gray-500 dark:text-gray-400 text-center mb-10 text-lg">
+        <p className="text-gray-500 dark:text-gray-400 text-center mb-10 text-base sm:text-lg">
           Your feedback helps us improve the Holy Quran experience.
         </p>
 

@@ -53,11 +53,11 @@ const Drawer = motion((props: Props) => {
             isRtl ? "right-0" : "left-0"
           } z-[60] h-screen w-80 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl shadow-2xl border-x border-slate-200 dark:border-slate-800 flex flex-col`}
         >
-          <div className="p-8 flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <img src="/quran.png" alt="Logo" className="w-10 h-10 object-contain" />
-              <span className="font-black text-xl gradient-text">Holy</span>
-            </div>
+           <div className="p-8 flex items-center justify-between">
+             <div className="flex items-center space-x-3">
+               <img src="/quran.png" alt="Logo" className="w-10 h-10 object-contain" />
+               <span className="font-black text-xl sm:text-2xl gradient-text">Holy</span>
+             </div>
             <motion.button 
               whileHover={{ scale: 1.1, rotate: 90 }}
               whileTap={{ scale: 0.9 }}
@@ -75,7 +75,7 @@ const Drawer = motion((props: Props) => {
             <select
               onChange={onTranslate}
               defaultValue={translation}
-              className="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-xl text-sm font-bold p-3 focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer"
+              className="w-full bg-slate-100 dark:bg-slate-800 border-none rounded-xl text-base font-bold p-3 focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer"
             >
               <option value="en-US">English</option>
               <option value="ar">عربي</option>
@@ -92,16 +92,16 @@ const Drawer = motion((props: Props) => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: key * 0.1 }}
                 >
-                  <Link
-                    to={link.path}
-                    onClick={props.closeSidebar}
-                    className="flex items-center space-x-4 p-4 rounded-2xl hover:bg-blue-50 dark:hover:bg-blue-900/20 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-bold transition-all group"
-                  >
-                    <div className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/40 transition-colors">
-                      {link.icon}
-                    </div>
-                    <span>{link.name}</span>
-                  </Link>
+                   <Link
+                     to={link.path}
+                     onClick={props.closeSidebar}
+                     className="flex items-center space-x-4 p-4 rounded-2xl hover:bg-blue-50 dark:hover:bg-blue-900/20 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-bold transition-all group"
+                   >
+                     <div className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/40 transition-colors">
+                       {link.icon}
+                     </div>
+                     <span className="text-base">{link.name}</span>
+                   </Link>
                 </motion.li>
               ))}
             </ul>

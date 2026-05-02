@@ -4,19 +4,36 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <link rel="icon" href="%PUBLIC_URL%/quran.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
     <meta name="theme-color" content="#0a0a0a" />
-    <meta
-      name="description"
-      content="Experience the Quran with a beautiful, modern, and interactive interface. Developed by Saif Fikry."
-    />
+    <meta name="description" content="Experience the Quran with a beautiful, modern, and interactive interface. Developed by Saif Fikry." />
     <meta name="author" content="Saif Fikry" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Holy" />
+    <!-- iOS icon for home screen -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/quran.png" />
+    <!-- PWA manifest -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Holy | Developed by Saif Fikry</title>
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Register service worker immediately
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then(function(registration) {
+              console.log('[ServiceWorker] Registered: ', registration);
+            })
+            .catch(function(registrationError) {
+              console.log('[ServiceWorker] Registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
 

@@ -85,18 +85,18 @@ export default function Sourate(props: Props) {
           )}
         </AnimatePresence>
 
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => setIsAutoScrolling(!isAutoScrolling)}
-          className={`p-4 rounded-2xl shadow-2xl flex items-center justify-center transition-all duration-300 ${
-            isAutoScrolling 
-              ? 'bg-blue-600 text-white ring-4 ring-blue-500/20' 
-              : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300'
-          }`}
-        >
-          {isAutoScrolling ? <HiOutlinePause size={28} /> : <div className="flex flex-col items-center"><HiOutlinePlay size={28} /><span className="text-[8px] font-bold mt-1">AUTO SCROLL</span></div>}
-        </motion.button>
+         <motion.button
+           whileHover={{ scale: 1.1 }}
+           whileTap={{ scale: 0.9 }}
+           onClick={() => setIsAutoScrolling(!isAutoScrolling)}
+           className={`p-4 rounded-2xl shadow-2xl flex items-center justify-center transition-all duration-300 min-h-[56px] min-w-[56px] ${
+             isAutoScrolling 
+               ? 'bg-blue-600 text-white ring-4 ring-blue-500/20' 
+               : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300'
+           }`}
+         >
+           {isAutoScrolling ? <HiOutlinePause size={28} /> : <div className="flex flex-col items-center"><HiOutlinePlay size={28} /><span className="text-[10px] sm:text-xs font-bold mt-1">AUTO SCROLL</span></div>}
+         </motion.button>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-8">

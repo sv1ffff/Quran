@@ -19,13 +19,13 @@ export default function Footer(props: {}) {
         </div>
         
         <div className="space-y-6">
-          <div className="font-medium text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-lg">
-            {translate("footer.description")}
-          </div>
-          <div className="text-slate-400 dark:text-slate-500 leading-relaxed max-w-xl text-base">
-            {translate("footer.paragraph")}
-          </div>
-        </div>
+           <div className="font-medium text-lg sm:text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-lg">
+             {translate("footer.description")}
+           </div>
+           <div className="text-slate-400 dark:text-slate-500 leading-relaxed max-w-xl text-base">
+             {translate("footer.paragraph")}
+           </div>
+         </div>
 
         <div className="pt-10 border-t border-slate-100 dark:border-slate-900">
           <div className="inline-block">

@@ -9,10 +9,10 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-6"
         >
-          <h1 className="text-6xl md:text-7xl font-black gradient-text tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black gradient-text tracking-tight">
             About Holy
           </h1>
-          <p className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 font-medium leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-slate-500 dark:text-slate-400 font-medium leading-relaxed max-w-3xl mx-auto">
             A premium digital experience for reading and learning the Quran, designed with modern aesthetics and user-centric features.
           </p>
         </motion.div>

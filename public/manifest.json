@@ -1,15 +1,37 @@
 {
   "short_name": "Holy",
   "name": "Holy Quran | Developed by Saif Fikry",
+  "description": "Experience the Quran with a beautiful, modern, and interactive interface. Works offline.",
   "icons": [
     {
       "src": "quran.png",
       "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "quran.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "quran.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "quran.png",
+      "sizes": "96x96",
       "type": "image/png"
     }
   ],
   "start_url": ".",
+  "scope": ".",
   "display": "standalone",
   "theme_color": "#0a0a0a",
-  "background_color": "#fcfcfc"
+  "background_color": "#fcfcfc",
+  "orientation": "portrait-primary",
+  "categories": ["education", "religion", "books"],
+  "screenshots": [],
+  "prefer_related_applications": false
 }

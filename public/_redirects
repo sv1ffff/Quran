@@ -1,1 +1,15 @@
+# PWA Offline Fallback - SPA routing (serve index.html for all non-file routes)
+/*    /index.html   200
+
+# Cache static assets for 1 year (immutable)
+/static/*   1y
+
+# Cache PWA files for 1 day
+/manifest.json   1d
+/service-worker.js   1d
+
+# API routes - bypass cache, always check network first
+/api/*   200
+
+# All other routes - SPA fallback to index.html
 /*    /index.html   200

@@ -17,7 +17,37 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @apply text-slate-900 dark:text-slate-100 bg-[#fcfcfc] dark:bg-[#0a0a0a] transition-colors duration-500;
+  @apply text-base sm:text-lg md:text-lg lg:text-base dark:text-slate-100 bg-[#fcfcfc] dark:bg-[#0a0a0a] transition-colors duration-500;
+}
+
+/* Larger base font for Arabic text */
+html {
+  @apply text-[17px] sm:text-[18px] md:text-[19px] lg:text-[16px];
+}
+
+/* Enhanced heading sizes for better readability */
+h1 {
+  @apply text-2xl sm:text-3xl md:text-4xl font-bold;
+}
+
+h2 {
+  @apply text-xl sm:text-2xl md:text-3xl font-semibold;
+}
+
+h3 {
+  @apply text-lg sm:text-xl md:text-2xl font-medium;
+}
+
+/* Larger touch targets for mobile */
+button, .button, [role="button"] {
+  @apply min-h-[44px] min-w-[44px];
+}
+
+/* Better spacing for mobile */
+@layer utilities {
+  .touch-padding {
+    @apply py-3 px-4 sm:py-2 sm:px-3;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
