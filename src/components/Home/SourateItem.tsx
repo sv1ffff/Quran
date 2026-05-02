@@ -27,14 +27,14 @@ export default function SourateItem({ sourate }: Props) {
             {sourate.number}
           </div>
           
-          <div className="flex-1 flex flex-col min-w-0">
-            <h3 className="text-lg sm:text-xl font-bold truncate transition-colors duration-300">
-              {sourate.name}
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-400 dark:text-slate-500 font-medium">
-              {sourate.englishNameTranslation}
-            </p>
-          </div>
+           <div className="flex-1 flex flex-col min-w-0">
+             <h3 className="text-xl sm:text-2xl font-bold truncate transition-colors duration-300">
+               {sourate.name}
+             </h3>
+             <p className="text-sm text-slate-400 dark:text-slate-500 font-medium">
+               {sourate.englishNameTranslation}
+             </p>
+           </div>
 
           <div className="flex flex-col items-end opacity-40 group-hover:opacity-100 transition-opacity">
              <span className="text-xs sm:text-sm font-bold text-slate-400 dark:text-slate-500">

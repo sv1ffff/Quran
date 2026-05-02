@@ -28,11 +28,11 @@ export default function Header(props: Props) {
         </Link>
       </div>
 
-      <div className="flex items-center space-x-4">
-        <div className="hidden md:flex items-center space-x-8 mr-6 font-bold text-sm sm:text-base text-slate-600 dark:text-slate-300">
-          <Link to="/" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</Link>
-          <Link to="/about" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</Link>
-        </div>
+        <div className="flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-8 mr-6 font-bold text-base sm:text-lg text-slate-600 dark:text-slate-300">
+            <Link to="/" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</Link>
+            <Link to="/about" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</Link>
+          </div>
 
         <div className="flex items-center space-x-3 mr-4">
           <a 

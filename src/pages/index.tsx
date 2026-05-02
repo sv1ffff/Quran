@@ -51,7 +51,7 @@ export default function Home(props: Props) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-lg sm:text-xl md:text-2xl text-slate-500 dark:text-slate-400 font-medium max-w-2xl mx-auto leading-relaxed mb-12"
+              className="text-xl sm:text-2xl md:text-3xl text-slate-500 dark:text-slate-400 font-medium max-w-2xl mx-auto leading-relaxed mb-12"
             >
               Experience the Quran with a beautiful and modern interface.
             </motion.p>

@@ -30,14 +30,14 @@ export default function LoadingSpinner({ className = "w-16 h-16" }: Props) {
           className="absolute inset-4 rounded-full bg-blue-500/10 backdrop-blur-sm"
         ></motion.div>
       </div>
-      <motion.p 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: [0.4, 1, 0.4] }}
-        transition={{ duration: 1.5, repeat: Infinity }}
-        className="text-sm font-bold tracking-widest text-blue-600/60 dark:text-blue-400/60 uppercase"
-      >
-        Loading
-      </motion.p>
+        <motion.p 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: [0.4, 1, 0.4] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+          className="text-base sm:text-lg font-bold tracking-widest text-blue-600/60 dark:text-blue-400/60 uppercase"
+        >
+          Loading
+        </motion.p>
       <span className="sr-only">Loading...</span>
     </div>
   );

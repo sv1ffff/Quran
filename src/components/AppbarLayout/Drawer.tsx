@@ -64,16 +64,16 @@ const Drawer = motion((props: Props) => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: key * 0.1 }}
                 >
-                  <Link
-                    to={link.path}
-                    onClick={props.closeSidebar}
-                    className="flex items-center space-x-4 p-4 rounded-2xl hover:bg-blue-50 dark:hover:bg-blue-900/20 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-bold transition-all group"
-                  >
-                    <div className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/40 transition-colors">
-                      {link.icon}
-                    </div>
-                    <span className="text-base">{link.name}</span>
-                  </Link>
+                   <Link
+                     to={link.path}
+                     onClick={props.closeSidebar}
+                     className="flex items-center space-x-4 p-4 rounded-2xl hover:bg-blue-50 dark:hover:bg-blue-900/20 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-bold transition-all group"
+                   >
+                     <div className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/40 transition-colors">
+                       {link.icon}
+                     </div>
+                     <span className="text-lg">{link.name}</span>
+                   </Link>
                 </motion.li>
               ))}
             </ul>

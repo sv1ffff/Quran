@@ -23,8 +23,15 @@ export default function SourateLists({
   }
   if (isError) {
     return (
-      <div className="flex justify-center items-center mt-8 pb-96">
-        <h1 className="text-red-500 text-xl font-bold">Network Issues. Please refresh.</h1>
+      <div className="flex justify-center items-center mt-8 pb-95">
+        <h1 className="text-red-500 text-xl sm:text-2xl font-bold">Network Issues. Please refresh.</h1>
+      </div>
+    );
+  }
+  if (MetaQueryData.length === 0) {
+    return (
+      <div className="flex justify-center items-center mt-8 pb-95">
+        <h1 className="text-slate-400 text-xl sm:text-2xl font-bold italic">No results found.</h1>
       </div>
     );
   }

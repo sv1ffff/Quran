@@ -18,11 +18,11 @@ export default function Footer(props: {}) {
           </h2>
         </div>
         
-        <div className="space-y-6">
-           <div className="font-medium text-lg sm:text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-lg">
+         <div className="space-y-6">
+           <div className="font-medium text-xl sm:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-lg">
              {translate("footer.description")}
            </div>
-           <div className="text-slate-400 dark:text-slate-500 leading-relaxed max-w-xl text-base">
+           <div className="text-slate-400 dark:text-slate-500 leading-relaxed max-w-xl text-lg">
              {translate("footer.paragraph")}
            </div>
          </div>

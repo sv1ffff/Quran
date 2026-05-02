@@ -44,7 +44,7 @@ export default function Sourate(props: Props) {
   if (arabic.isError) {
     return (
       <div className="flex justify-center items-center h-screen dark:bg-[#0F172A] bg-slate-50">
-        <h1 className="text-red-500 text-xl font-bold bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-xl">
+        <h1 className="text-red-500 text-xl sm:text-2xl font-bold bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-xl">
           Network error. Please check your connection.
         </h1>
       </div>
@@ -57,23 +57,23 @@ export default function Sourate(props: Props) {
       <div className="fixed bottom-8 right-8 z-50 flex flex-col items-center space-y-4">
         <AnimatePresence>
           {isAutoScrolling && (
-            <motion.div
-              initial={{ opacity: 0, y: 20, scale: 0.8 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 20, scale: 0.8 }}
-              className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md p-2 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 flex flex-col items-center space-y-2"
-            >
-              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Speed</span>
-              <input 
-                type="range" 
-                min="1" 
-                max="10" 
-                value={scrollSpeed} 
-                onChange={(e) => setScrollSpeed(parseInt(e.target.value))}
-                className="w-24 accent-blue-500 cursor-pointer"
-              />
-              <span className="text-xs font-bold text-blue-500">{scrollSpeed}x</span>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20, scale: 0.8 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 20, scale: 0.8 }}
+                className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md p-3 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 flex flex-col items-center space-y-2"
+              >
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Speed</span>
+                <input 
+                  type="range" 
+                  min="1" 
+                  max="10" 
+                  value={scrollSpeed} 
+                  onChange={(e) => setScrollSpeed(parseInt(e.target.value))}
+                  className="w-24 accent-blue-500 cursor-pointer"
+                />
+                <span className="text-sm font-bold text-blue-500">{scrollSpeed}x</span>
+              </motion.div>
           )}
         </AnimatePresence>
 
@@ -81,13 +81,13 @@ export default function Sourate(props: Props) {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsAutoScrolling(!isAutoScrolling)}
-          className={`p-4 rounded-2xl shadow-2xl flex items-center justify-center transition-all duration-300 min-h-[56px] min-w-[56px] ${
+          className={`p-4 sm:p-5 rounded-2xl shadow-2xl flex items-center justify-center transition-all duration-300 min-h-[60px] min-w-[60px] ${
             isAutoScrolling 
               ? 'bg-blue-600 text-white ring-4 ring-blue-500/20' 
               : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300'
           }`}
         >
-          {isAutoScrolling ? <HiOutlinePause size={28} /> : <div className="flex flex-col items-center"><HiOutlinePlay size={28} /><span className="text-[10px] sm:text-xs font-bold mt-1">AUTO SCROLL</span></div>}
+          {isAutoScrolling ? <HiOutlinePause size={28} /> : <div className="flex flex-col items-center"><HiOutlinePlay size={28} /><span className="text-xs sm:text-sm font-bold mt-1">AUTO SCROLL</span></div>}
         </motion.button>
       </div>
 

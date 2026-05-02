@@ -12,7 +12,7 @@ export default function About() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black gradient-text tracking-tight">
             About Holy
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-slate-500 dark:text-slate-400 font-medium leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl sm:text-2xl md:text-3xl text-slate-500 dark:text-slate-400 font-medium leading-relaxed max-w-3xl mx-auto">
             A premium digital experience for reading and learning the Quran, designed with modern aesthetics and user-centric features.
           </p>
         </motion.div>
