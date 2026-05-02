@@ -1,24 +1,21 @@
 import { Link } from "react-router-dom";
 import { Reciter } from "../../types/reciter";
+import { motion } from "framer-motion";
 
 type Props = {
   reciter: Reciter;
 };
 
-import { motion } from "framer-motion";
-
 export default function RecitersItem({ reciter }: Props) {
   return (
     <motion.div
-      whileHover={{ y: -5, scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+      whileHover={{ y: -2 }}
     >
       <Link
         to={`/reciters/${reciter.identifier}`}
-        className="group relative flex items-center justify-center p-6 glass-card rounded-2xl premium-shadow border-white/30 dark:border-slate-700/50 hover:border-blue-500/50 transition-all duration-500 overflow-hidden text-center min-h-[5rem]"
+        className="group relative flex items-center justify-center p-6 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-300 text-center min-h-[5rem] shadow-sm"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <span className="font-bold text-slate-700 dark:text-slate-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors relative z-10">
+        <span className="font-bold text-slate-700 dark:text-slate-200 transition-colors relative z-10">
           {reciter.name}
         </span>
       </Link>
