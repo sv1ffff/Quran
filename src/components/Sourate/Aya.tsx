@@ -33,7 +33,7 @@ export default function Aya(props: Props) {
 
   return (
     <div 
-      className="group relative mb-12 p-8 md:p-12 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-3xl"
+      className="group relative mb-8 p-4 sm:p-8 md:p-12 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl md:rounded-3xl"
     >
       <div className="flex flex-col space-y-10">
         {/* Header with Number and Audio */}
@@ -66,7 +66,8 @@ export default function Aya(props: Props) {
         <div className="flex justify-center md:justify-end py-4">
           <img
             alt={`Aya ${props.aya.numberInSurah}`}
-            className="dark:filter dark:invert-[100%] max-w-full h-auto opacity-90 group-hover:opacity-100 transition-opacity"
+            className="dark:filter dark:invert-[100%] w-full md:w-auto max-w-full h-auto opacity-90 group-hover:opacity-100 transition-opacity"
+            style={{ minWidth: '100%', maxWidth: '100%' }}
             src={`https://cdn.islamic.network/quran/images/high-resolution/${props.sourateID}_${props.aya.numberInSurah}.png`}
           />
         </div>
