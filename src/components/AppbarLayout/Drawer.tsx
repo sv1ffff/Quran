@@ -40,10 +40,10 @@ const Drawer = motion((props: Props) => {
           exit="exit"
           className="fixed top-0 left-0 z-[60] h-screen w-80 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl shadow-2xl border-x border-slate-200 dark:border-slate-800 flex flex-col"
         >
-          <div className="p-8 flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <img src="/quran.png" alt="Logo" className="w-10 h-10 object-contain" />
-              <span className="font-black text-xl sm:text-2xl gradient-text">Holy</span>
+          <div className="p-6 sm:p-8 flex items-center justify-between">
+            <div className="flex items-center space-x-2 sm:space-x-3">
+              <img src="/quran.png" alt="Logo" className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
+              <span className="font-black text-lg sm:text-xl gradient-text">Holy</span>
             </div>
             <motion.button 
               whileHover={{ scale: 1.1, rotate: 90 }}
