@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { FaInstagram, FaSnapchatGhost } from "react-icons/fa";
 import DarkModeToggle from "../DarkModeToggle";
 
 type Props = {
@@ -32,6 +32,25 @@ export default function Header(props: Props) {
         <div className="hidden md:flex items-center space-x-8 mr-6 font-bold text-sm text-slate-600 dark:text-slate-300">
           <Link to="/" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</Link>
           <Link to="/about" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</Link>
+        </div>
+
+        <div className="flex items-center space-x-3 mr-4">
+          <a 
+            href="https://www.instagram.com/sv1ffff?igsh=MWYxMGFlbnB6c21ndw==" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-2 rounded-xl bg-slate-50 dark:bg-slate-900 text-slate-400 hover:text-pink-600 dark:hover:text-pink-500 transition-all border border-slate-100 dark:border-slate-800"
+          >
+            <FaInstagram size={20} />
+          </a>
+          <a 
+            href="https://www.snapchat.com/add/drxsviff?share_id=M63wDMLLY0U&locale=en-GB" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-2 rounded-xl bg-slate-50 dark:bg-slate-900 text-slate-400 hover:text-yellow-500 transition-all border border-slate-100 dark:border-slate-800"
+          >
+            <FaSnapchatGhost size={20} />
+          </a>
         </div>
         <DarkModeToggle />
       </div>
